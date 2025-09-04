@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Bricolage_Grotesque } from 'next/font/google';
 import './globals.css';
 import { TRPCReactProvider } from '@/trpc/client';
+import { Toaster } from 'sonner';
 
 const BricolageGrotesque = Bricolage_Grotesque({
   variable: '--font-geist-sans',
@@ -22,6 +23,7 @@ export default function RootLayout({
     <TRPCReactProvider>
       <html lang="en">
         <body className={`${BricolageGrotesque.className}  antialiased`}>
+          <Toaster />
           {children}
         </body>
       </html>
